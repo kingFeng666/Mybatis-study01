@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--上面的是Mybatis的约束-->
+<mapper namespace="com.lf.Dao.StudentDao">
+    <!--namespace 一般要求使用接口的全限定名称 -->
+    <!--select 标签用来执行特定的select语句 id 是语句的标识  id一般要求和接口中的方法名一致
+    resultType 是sql语句执行后返回的数据类型 一般使用实体类的全限定名称  -->
+    <select id="selectStudent" resultType="com.lf.entity.Student">
+    select * from student order by id
+  </select>
+</mapper>
